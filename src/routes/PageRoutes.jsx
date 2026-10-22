@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 import ScrollToTop from "@/components/Special/ScrollToTop/ScrollToTop";
-import Loader from "@/components/common/Loader/Loader";
+import Loader from "@/components/Common/Loader/Loader";
 
 import Landing from "@/pages/Landing/Landing";
 
