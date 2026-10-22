@@ -1,0 +1,163 @@
+.reservationContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.reservation {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-background-dark);
+  padding: 20px;
+  gap: 20px;
+  border-radius: 32px;
+
+  & :nth-child(5) {
+    border: none;
+  }
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    width: 100%;
+    max-width: 650px;
+    border: none;
+    border-radius: 0;
+    background-color: var(--color-background-secondary);
+  }
+}
+
+.reservationItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    padding: 10px 0;
+  }
+
+  label {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  input {
+    border: none;
+    height: 20px;
+    width: 185px;
+    text-align: left;
+    margin-left: -2px;
+    background-color: var(--color-background-dark);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text-tertiary);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-text-tertiary);
+      opacity: 1;
+    }
+
+    @media (max-width: 1250px) {
+      width: 100%;
+      padding: 0 20px;
+      margin: 0;
+      background-color: var(--color-background-primary);
+      border-radius: 100vw;
+      height: 50px;
+    }
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+
+    @media (max-width: 1250px) {
+      filter: invert(0);
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .inputContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    .error {
+      position: absolute;
+      bottom: -15px;
+      display: flex;
+      justify-content: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 8px;
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      padding: 0;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    @media (max-width: 1250px) {
+      justify-content: center;
+      bottom: -19px;
+    }
+  }
+}
+
+.bookButton {
+  position: relative;
+  width: 175px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-highlight);
+  color: var(--color-text-dark);
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+    margin-top: 48px;
+    border-radius: 100vw;
+    height: 50px;
+    text-align: center;
+  }
+}
+
+.bookButton:hover {
+  background: var(--color-background-light);
+
+  @media (max-width: 1250px) {
+    background: var(--color-highlight);
+  }
+}
